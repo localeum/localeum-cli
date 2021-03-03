@@ -4,7 +4,7 @@ import (
 	"github.com/go-resty/resty/v2"
 )
 
-const HostUrl = "https://api.localeum.com/api"
+const HostUrl = "https://api.localeum.com/public-api"
 
 type Api struct {
 	client *resty.Client
@@ -17,7 +17,7 @@ func NewApiClient() *Api {
 
 	a.client.SetHeaders(map[string]string{
 		"Content-Type": "application/json",
-		"User-Agent": "Localeum CLI",
+		"User-Agent":   "Localeum CLI",
 	})
 
 	return a
