@@ -41,7 +41,7 @@ brews:
     homepage: "https://docs.localeum.com/cli"
     description: "Localeum CLI"
     skip_upload: false
-    name: localeum
+    name: localeum-cli
 
 checksum:
   name_template: 'checksums.txt'
