@@ -16,7 +16,7 @@ var (
 	ApiKey    string
 )
 
-const Version = "1.0.0"
+const Version = "1.0.5"
 const ConfigFileName = "localeum.yml"
 
 const ApiKeyFlag = "api-key"
