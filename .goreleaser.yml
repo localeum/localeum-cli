@@ -33,6 +33,16 @@ archives:
 
     name_template: "localeum-cli_{{ .Os }}_{{ .Arch }}{{ if .Arm }}_v{{ .Arm }}{{ end }}"
 
+brews:
+  - tap:
+      owner: localeum
+      name: homebrew-tools
+    folder: Formula
+    homepage: "https://docs.localeum.com/cli"
+    description: "Localeum CLI"
+    skip_upload: false
+    name: localeum
+
 checksum:
   name_template: 'checksums.txt'
 
