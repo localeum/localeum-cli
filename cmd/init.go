@@ -13,21 +13,21 @@ var initCmd = &cobra.Command{
 	Short: "Configure your CLI tool",
 	Long:  GetHeader(),
 	RunE: func(cmd *cobra.Command, args []string) error {
-		if err:= checkExistConfigFile(); err != nil {
+		if err := checkExistConfigFile(); err != nil {
 			return nil
 		}
 
-		fmt.Print("Enter the API access token for your project: ")
+		fmt.Print("Enter the API key for your project: ")
 		if _, err := fmt.Fscan(os.Stdin, &ApiKey); err != nil {
 			return err
 		}
 
-		fmt.Print("Enter the path to the DirectoryFlag for the localization files: ")
+		fmt.Print("Enter the path to the directory for the localization files: ")
 		if _, err := fmt.Fscan(os.Stdin, &Directory); err != nil {
 			return err
 		}
 
-		fmt.Print("Enter the file FormatFlag for export (json, csv, yaml): ")
+		fmt.Print("Enter the file format for export (json, csv, yaml): ")
 		if _, err := fmt.Fscan(os.Stdin, &Format); err != nil {
 			return err
 		}

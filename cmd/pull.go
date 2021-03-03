@@ -9,7 +9,6 @@ import (
 	"sync"
 )
 
-
 var pullCmd = &cobra.Command{
 	Use:   "pull",
 	Short: "Download your current translations in various file format.",
@@ -18,7 +17,6 @@ var pullCmd = &cobra.Command{
 		CheckConfigFile()
 
 		Api.SetAuthToken(viper.GetString(ApiKeyFlag))
-
 
 		resp, err := Api.Get("/v1/languages", map[string]string{})
 		if err != nil {
