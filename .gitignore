@@ -1,0 +1,6 @@
+localeum.yml
+localeum-cli
+
+.DS_Store
+.idea
+/dist/
