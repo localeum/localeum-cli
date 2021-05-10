@@ -2,7 +2,7 @@
 
 Using the Localeum CLI, you can integrate the Localeum platform into your CI/CD process to download actual translations.
 
-Read more docs on https://docs.localeum.com/cli
+Read more docs on https://docs.localeum.com
 
 ## Getting started
 
