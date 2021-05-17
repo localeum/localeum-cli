@@ -67,7 +67,7 @@ Enter the path to the directory for the localization files:
 The directory where the localization files will be saved, for example **locales**
 
 ```console
-Enter the file format for export (json, csv, yaml): 
+Enter the file format for export (json, json_nested, csv, yaml): 
 ```
 
 If you did everything correctly, you will see the inscription.

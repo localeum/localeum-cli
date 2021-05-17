@@ -27,7 +27,7 @@ var initCmd = &cobra.Command{
 			return err
 		}
 
-		fmt.Print("Enter the file format for export (json, csv, yaml): ")
+		fmt.Print("Enter the file format for export (json, json_nested, csv, yaml): ")
 		if _, err := fmt.Fscan(os.Stdin, &Format); err != nil {
 			return err
 		}
