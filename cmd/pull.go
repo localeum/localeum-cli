@@ -75,7 +75,7 @@ func fetchFile(lang string, wg *sync.WaitGroup) {
 		return
 	}
 
-	filename := viper.GetString(DirectoryFlag) + "/" + lang + "." + format
+	filename := viper.GetString(DirectoryFlag) + "/" + lang + formatToExtensionMapper(format)
 	file, err := os.Create(filename)
 	if err != nil {
 		fmt.Println(err)
@@ -92,4 +92,19 @@ func fetchFile(lang string, wg *sync.WaitGroup) {
 
 	fmt.Println("File -", filename, "downloaded")
 	wg.Done()
+}
+
+func formatToExtensionMapper(format string) string {
+	switch format {
+	case "json":
+		return ".json"
+	case "json_nested":
+		return ".json"
+	case "csv":
+		return ".csv"
+	case "arb":
+		return ".arb"
+	default:
+		return ""
+	}
 }
