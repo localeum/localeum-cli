@@ -86,7 +86,34 @@ To download the latest translations, run the following command.
 $ localeum-cli pull
 ```
 
+### Configuration file options
+Localeum CLI configuration files use the YAML.  
+The **localeum.yml** file must be in the root of the project.
 
+Example: 
+```yaml
+api-key: "{your API key}"
+directory: "locales"
+format: "json"
+```
 
+| Option  | Default | Required |
+|---|---|---|
+| api-key | null | Yes |
+| directory | null | Yes |  
+| format | null | Yes |   
+| filename-template | %lang% | No |
 
+#### Format
 
+Possible variants: json, json_nested, arb, csv.
+
+#### Filename template
+
+This template to create your own filename.  
+Possible replaces:  
+
+###### %lang%
+Language
+
+Example: intl_%lang% => intl_en.{ext}

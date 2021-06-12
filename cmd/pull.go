@@ -6,6 +6,7 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 	"os"
+	"strings"
 	"sync"
 )
 
@@ -75,7 +76,13 @@ func fetchFile(lang string, wg *sync.WaitGroup) {
 		return
 	}
 
-	filename := viper.GetString(DirectoryFlag) + "/" + lang + formatToExtensionMapper(format)
+	fileStem := lang
+	filenameTemplate:= viper.GetString(FilenameTemplate)
+	if filenameTemplate != "" {
+		fileStem = strings.ReplaceAll(filenameTemplate, "%lang%", lang)
+	}
+
+	filename := viper.GetString(DirectoryFlag) + "/" + fileStem + formatToExtensionMapper(format)
 	file, err := os.Create(filename)
 	if err != nil {
 		fmt.Println(err)

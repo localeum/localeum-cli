@@ -16,12 +16,13 @@ var (
 	ApiKey    string
 )
 
-const Version = "1.0.5"
+const Version = "1.0.7"
 const ConfigFileName = "localeum.yml"
 
 const ApiKeyFlag = "api-key"
 const DirectoryFlag = "directory"
 const FormatFlag = "format"
+const FilenameTemplate = "filename-template"
 
 var rootCmd = &cobra.Command{
 	Use:     "localeum-cli",

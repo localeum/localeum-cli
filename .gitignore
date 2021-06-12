@@ -1,5 +1,6 @@
 localeum.yml
 localeum-cli
+/locales
 
 .DS_Store
 .idea

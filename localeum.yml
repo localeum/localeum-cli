@@ -1,3 +1,4 @@
-api-key: "bc5de44b32e69d177e7ae0dc867eda06"
+api-key: "a01fe273ace36608f6c33786cc414ab7"
 directory: "locales"
-format: "csv"
+format: "yaml"
+filename-template: "intl_%lang%"
